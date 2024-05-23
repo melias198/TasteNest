@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile || TasteNest</title>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- Dashboard -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/logo.png" alt="simply recipes" height="30px" width="80px" style="margin-top: -5px;"/>
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
+          <a href="events.html" class="nav-link"> events </a>
+
+          <div class="nav-link contact-link">
+            <a id="loginLink" href="login.html" class="btn"> login </a>
+            <a id="profileLink" href="profile.html" class="btn"> profile </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    
+    <main class="page">
+
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+              <a href="./profile.html" class="list-group-item list-group-item-action active">Dashboard</a>
+              <a href="./update.html" class="list-group-item list-group-item-action">Update Info</a>
+              <a href="./profile-recipe.html" class="list-group-item list-group-item-action">Recipe Managment</a>
+              <a href="./add-recipe.html" class="list-group-item list-group-item-action">Post Recipe</a>
+              <a href="./profile-event.html" class="list-group-item list-group-item-action">Event Managment</a>
+              <a href="./add-event.html" class="list-group-item list-group-item-action">Post Event</a>
+              <a href="#" onclick="handleLogout()" class="list-group-item list-group-item-action">Logout</a>       
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card">
+
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <h4>Profile</h4>
+		                    <hr>
+		                </div>
+		            </div>
+
+                <div class="row" id="profile-section">
+		            <div class="col-md-12 text-center profile-img"> 
+                        <!-- <img src="./assets/about.jpeg" alt="">
+                        <h5>Mohammad Elias</h5>
+                        <h6>elias@gmail.com</h6>
+                        <span>Phone : 01888593849 | adress : Dhaka | Total Recipe : 10 | Total Event : 20</span> -->
+                    </div>   
+                </div>
+		            
+		        </div>
+                <!--  -->
+
+		    </div>
+		</div>
+	</div>
+</div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        &copy; <span id="date"></span>
+        <span class="footer-logo">TasteNest</span> 
+        Customized by
+        <a href="https://www.linkedin.com/in/mohammad-elias/">Elias</a>
+      </p>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/is_logged.js"></script>
+    <script src="./js/jwt.js"></script>
+    <script src="./js/profile.js"></script>
+    <script src="./js/auth.js"></script>
+  </body>
+</html>
