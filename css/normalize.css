@@ -349,3 +349,158 @@ template {
 [hidden] {
   display: none;
 }
+
+
+/* Login */
+/* Add these styles to your main.css file */
+
+/* General styles for smaller screens */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Contact container styles */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contact-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  margin-bottom: 5px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 1em;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-block:hover {
+  background-color: #555;
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-info, .contact-form {
+    width: 48%;
+  }
+}
+
+/* Additional styles for even larger screens */
+@media (min-width: 1024px) {
+  .nav-center {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .contact-info img {
+    width: 580px;
+    height: 320px;
+  }
+}
+
+
+/* Event */
+/* Basic table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+/* Table header and cell styles */
+th, td {
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Make table header sticky for better usability on smaller screens */
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+}
+
+/* Alternative responsive styles for smaller screens */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* Add data attributes to cells for better readability */
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 0.75em;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}

@@ -23,12 +23,18 @@ const getparams = async () => {
 
 const displayEventDetails = (data) => {
     const eventDate = new Date(data.event_date);
-    const formattedDate = eventDate.toLocaleDateString();
+
+    const year = eventDate.getFullYear();
+    const month = String(eventDate.getMonth() + 1).padStart(2, '0');
+    const day = String(eventDate.getDate()).padStart(2, '0');
+    const hours = String(eventDate.getHours()).padStart(2, '0');
+    const minutes = String(eventDate.getMinutes()).padStart(2, '0');
+    const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
 
     document.getElementById("event-title").value = data.name;
     document.getElementById("event-description").value = data.description;
     document.getElementById("event-location").value = data.location;
-    document.getElementById("event-date").value = formattedDate;
+    document.getElementById("event-date").value = formattedDateTime;
 }
 
 
